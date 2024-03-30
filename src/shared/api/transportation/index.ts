@@ -1,0 +1,1 @@
+export { getTransportations } from "./get";
