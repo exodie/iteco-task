@@ -36,7 +36,7 @@ const Container = styled.section`
   padding: 32px 25px;
   margin: 16px 10px;
 
-  border-radius: 16;
+  border-radius: 16px;
 
   max-width: 1100px;
 `;
