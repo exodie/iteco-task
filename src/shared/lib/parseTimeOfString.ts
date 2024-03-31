@@ -1,26 +1,18 @@
-export const parseTimeOfString = (timeString: string) => {
-  const dateTime = new Date(timeString);
+import { MONTHS } from "../types";
 
-  const MONTHS: { [x: number]: string } = {
-    0: "Январь",
-    1: "Февраль",
-    2: "Март",
-    3: "Апрель",
-    4: "Май",
-    5: "Июнь",
-    6: "Июль",
-    7: "Август",
-    8: "Сентябрь",
-    9: "Октябрь",
-    10: "Ноябрь",
-    11: "Декабрь",
-  };
+export const parseTimeOfString = (timeString: string) => {
+  const date = new Date(timeString);
+
+  const months = date.getMonth();
+  const hours = date.getHours();
+  const minutes = date.getMinutes();
 
   return {
-    year: dateTime.getFullYear(),
-    modifiedMonth: MONTHS[dateTime.getMonth()], // Используем строку для доступа к месяцу
-    day: dateTime.getDate(),
-    hour: dateTime.getHours(),
-    minute: dateTime.getMinutes(),
+    year: date.getFullYear(),
+    numberOfMonth: months,
+    modifiedMonth: MONTHS[months],
+    day: date.getDate(),
+    hour: hours > 9 ? hours : `0${hours}`,
+    minute: minutes > 9 ? minutes : `0${minutes}`,
   };
 };
