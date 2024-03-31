@@ -25,7 +25,7 @@ export const CartRoute: FC<RouteOfTransportation> = ({
         <span>
           Расстояние: {distance}км{" "}
           {/* // TODO: Fix addPoints generating & посмотреть падежи в слове */}
-          {addPoints?.length && <strong>+{addPoints.length} Пункта</strong>}
+          {addPoints?.length && <span style={{ color: "#017B59", fontWeight: 600 }}>+{addPoints.length} Пункта</span>}
         </span>
       </div>
     </RouteContainer>
