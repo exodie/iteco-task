@@ -1,7 +1,7 @@
 import { type FC } from "react";
 import styled from "styled-components";
 
-import { CargoOfTransportation } from "@/shared/types";
+import { type CargoOfTransportation } from "@/shared/types";
 import { parseTimeOfString } from "@/shared/lib";
 
 export const CartCargo: FC<CargoOfTransportation> = (props) => {
