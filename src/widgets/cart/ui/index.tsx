@@ -34,9 +34,10 @@ const Container = styled.section`
   background: white;
 
   padding: 32px 25px;
-  margin: 16px 10px;
+  margin: 16px auto;
 
   border-radius: 16px;
 
   max-width: 1100px;
+  width: 100%;
 `;

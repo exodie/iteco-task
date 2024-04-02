@@ -1,12 +1,17 @@
 import { configureStore } from "@reduxjs/toolkit";
 
-import { counterReducer, transportationReducer } from "./features";
+import {
+  counterReducer,
+  filtersReducer,
+  transportationReducer,
+} from "./features";
 
 export const store = () => {
   return configureStore({
     reducer: {
       counter: counterReducer,
       transportation: transportationReducer,
+      filters: filtersReducer,
     },
   });
 };
